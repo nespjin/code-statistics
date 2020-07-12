@@ -89,6 +89,7 @@ class CodeStatistics(private val dirs: Array<String>) {
             XML File Empty Line Count:$xmlFileEmptyLineCount
             XML File Note Line Count:$xmlFileNoteLineCount
             XML File Code Line Count:$xmlFileCodeLineCount
+            
         """.trimIndent())
     }
 
