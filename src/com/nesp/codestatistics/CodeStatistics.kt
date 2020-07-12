@@ -27,6 +27,33 @@ class CodeStatistics(private val dirs: Array<String>) {
             val rootFile = File(dir)
             analyse(rootFile)
         }
+
+
+        println("""
+            Summary：
+
+            Java File Count:$javaFileCount
+            Java File Line Count:$javaFileLineCount
+            Java File Empty Line Count:$javaFileEmptyLineCount
+            Java File Note Line Count:$javaFileNoteLineCount
+            Java File Code Line Count:$javaFileCodeLineCount
+            
+            ==================================================
+            
+            Kotlin File Count:$kotlinFileCount
+            Kotlin File Line Count:$kotlinFileLineCount
+            Kotlin File Empty Line Count:$kotlinFileEmptyLineCount
+            Kotlin File Note Line Count:$kotlinFileNoteLineCount
+            Kotlin File Code Line Count:$kotlinFileCodeLineCount
+            
+            ==================================================
+            
+            XML File Count:$xmlFileCount
+            XML File Line Count:$xmlFileLineCount
+            XML File Empty Line Count:$xmlFileEmptyLineCount
+            XML File Note Line Count:$xmlFileNoteLineCount
+            XML File Code Line Count:$xmlFileCodeLineCount
+        """.trimIndent())
     }
 
 
@@ -39,6 +66,8 @@ class CodeStatistics(private val dirs: Array<String>) {
         }
 
         println("""
+            Directory:${rootFile.absolutePath}
+
             Java File Count:$javaFileCount
             Java File Line Count:$javaFileLineCount
             Java File Empty Line Count:$javaFileEmptyLineCount
